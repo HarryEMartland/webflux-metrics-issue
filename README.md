@@ -10,7 +10,7 @@ from spring boot 2.1.4.RELEASE micrometer metrics are not being recorded correct
 |2.1.6.RELEASE       | web     | String              | yes              | 
 |2.1.5.RELEASE       | webflux | String              | no               | 
 |2.1.5.RELEASE       | webflux | Mono                | no               | 
-|2.1.5.RELEASE       | webflux | Exception           | yes               | 
+|2.1.5.RELEASE       | webflux | Exception           | yes              | 
 |2.1.5.RELEASE       | web     | String              | yes              | 
 |2.1.4.RELEASE       | webflux | String              | yes              | 
 |2.1.4.RELEASE       | webflux | Mono                | yes              | 
@@ -18,7 +18,7 @@ from spring boot 2.1.4.RELEASE micrometer metrics are not being recorded correct
 |2.1.4.RELEASE       | web     | String              | yes              | 
 
 #### Testing
-After building this project with the correct version of spring boot and selecting either `spring-boot-starter-webflux` or `spring-boot-starter-webflux` the test endpoint was requested a number of times.
+After building this project with the correct version of spring boot and selecting either `spring-boot-starter-webflux` or `spring-boot-starter-web` the test endpoint was requested a number of times.
 The metrics endpoint was then check to see if the `/test` endpoint had been registered.
 
 For testing the reactive controller the `/test` method was made to return `Mono.just("test")` otherwise it would just return a string.
