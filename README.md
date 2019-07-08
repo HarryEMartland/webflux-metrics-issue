@@ -17,6 +17,19 @@ from spring boot 2.1.4.RELEASE micrometer metrics are not being recorded correct
 |2.1.4.RELEASE       | webflux | Exception           | yes              | 
 |2.1.4.RELEASE       | web     | String              | yes              | 
 
+#### Fix
+
+forcing reactor-netty to be downgraded to 0.8.6.RELEASE can be used as a workaround.
+
+```gradle
+dependencies {
+    ...
+    implementation ("io.projectreactor.netty:reactor-netty:0.8.6.RELEASE") {
+        force = true
+    }
+}
+```
+
 #### Testing
 After building this project with the correct version of spring boot and selecting either `spring-boot-starter-webflux` or `spring-boot-starter-web` the test endpoint was requested a number of times.
 The metrics endpoint was then check to see if the `/test` endpoint had been registered.
