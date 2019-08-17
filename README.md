@@ -4,6 +4,8 @@ from spring boot 2.1.4.RELEASE micrometer metrics are not being recorded correct
 
 |Spring Boot Version | Server  | Controller Response | Metrics Reported |
 |--------------------|---------|---------------------|------------------|
+|2.1.8.BUILD-SNAPSHOT| webflux | Mono                | yes              | 
+|2.1.8.BUILD-SNAPSHOT| webflux | String              | yes              | 
 |2.1.6.RELEASE       | webflux | Mono                | no               | 
 |2.1.6.RELEASE       | webflux | String              | no               | 
 |2.1.6.RELEASE       | webflux | Exception           | yes              | 

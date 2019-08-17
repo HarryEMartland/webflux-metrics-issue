@@ -1,5 +1,12 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo.spring.io/snapshot' }
+        maven { url 'http://repo.spring.io/milestone' }
+    }
+}
+
 plugins {
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'org.springframework.boot' version '2.1.8.BUILD-SNAPSHOT'
     id 'java'
 }
 
@@ -19,7 +26,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation ("io.projectreactor.netty:reactor-netty:0.8.6.RELEASE") {
+    implementation ("io.projectreactor.netty:reactor-netty:0.8.10.RELEASE") {
         force = true
     }
 }
